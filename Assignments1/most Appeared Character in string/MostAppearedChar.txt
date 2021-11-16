@@ -1,0 +1,29 @@
+DECLARE mychar, thischar, nextchar : CHARACTER
+DECLARE highest, count, x, b : INTEGER
+DECLARE str1 : STRING
+
+mychar <-- ""
+highest <-- 0
+count <-- 0
+
+INPUT "Enter string to process: ",str1
+
+FOR x <-- 1 TO LEN(str1)
+     nextchar <-- Mid(str1, x, 1)
+            count <-- 0
+
+            FOR b <-- 1 TO LEN(str1)
+                thischar <-- Mid(str1, b, 1)
+                If thischar = nextchar Then 
+                   count <-- count + 1
+            Next
+
+            If count > highest Then
+                highest <-- count
+                mychar <-- nextchar
+
+            End If
+        Next
+
+  OUTPUT mychar +  "  " +  "appeared the most"  +  " "  + highest + " " +  "times."
+        

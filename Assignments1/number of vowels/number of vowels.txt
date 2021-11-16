@@ -1,0 +1,20 @@
+ DECLARE myStr, myChar : String
+ DECLARE Count, vNum : Integer
+ Const vowels <-- "AEIOU"
+
+ myStr <-- ""
+ myChar <-- ""
+ vNum <-- 0
+ Count <-- 0
+
+ INPUT "Enter string to look for vowels: ",myStr
+ myStr <-- UpperC:e(myStr)
+
+ For Count <-- 1 To LEN(myStr)
+            myChar <-- Mid(myStr, Count, 1)
+            If LOCATE(vowels, myChar) > 0 Then
+                vNum <-- vNum + 1
+            End If
+        Next
+
+  OUTPUT("Number of vowels in the given string: " + vNum)

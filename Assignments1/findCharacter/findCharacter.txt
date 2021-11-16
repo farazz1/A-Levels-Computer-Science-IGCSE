@@ -1,0 +1,22 @@
+DECLARE str1, x, nextChar : String
+DECLARE count, cCount : Integer
+
+ str1 <-- ""
+ x <-- ""
+ nextChar <-- ""
+ count <-- 0
+ cCount <-- 0
+
+INPUT "Enter your string: ",str1
+INPUT "enter the character to be found: ",x
+
+For count <-- 1 To Len(str1)
+            nextChar <-- Mid(str1, count, 1)
+
+            If UpperCase(nextChar) = UpperCase(x) Then
+                cCount <-- cCount + 1
+
+            End If
+        Next
+
+OUTPUT cCount

@@ -1,0 +1,25 @@
+DECLARE str1, newStr, char1, char2, nextchar : String
+DECLARE count : Integer
+
+str1 <-- ""
+newStr <-- ""
+char1 <-- ""
+char2 <-- ""
+nextChar <-- ""
+count <-- 0
+
+INPUT "Enter sentence to be processed: ", str1
+INPUT "Enter character to be replaced: ", char1
+INPUT "Enter new character: ",char2
+
+FOR count <-- 1 TO LEN(str1)
+   nextChar<--MID(str1, count, 1)
+   
+   IF nextChar<--char1 THEN
+   nextChar<--char2
+
+ENDIF
+     newStr<-- newStr + nextChar
+NEXT
+
+OUTPUT "Your new sentence is: " + newStr

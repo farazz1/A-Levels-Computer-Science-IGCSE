@@ -1,0 +1,11 @@
+DECLARE str1 : Integer
+
+str1 <-- 0
+
+INPUT "enter the number of donuts: ",str1
+
+If str1 > 9 Then
+  OUTPUT("Number of donuts: many")
+     Else
+        OUTPUT("Number of donuts: " & str1)
+ End If

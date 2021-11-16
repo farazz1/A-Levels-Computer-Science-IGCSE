@@ -1,0 +1,28 @@
+DECLARE str1, str2 : String
+DECLARE mychar, thischar : CHARACTER
+DECLARE count : Integer
+
+str1 <-- ""
+str2 <-- ""
+mychar <-- ""
+thischar <-- ""
+count <-- 0
+
+INPUT "enter your string: ",str1
+mychar <-- Mid(str1, 1, 1)
+
+For count <-- 2 To Len(str1)
+    thischar <-- Mid(str1, count, 2)
+
+        If thischar <-- mychar Then
+                thischar <-- "*"
+        Else
+                thischar <-- thischar
+        End If
+            str2 <-- str2 + thischar
+
+Next
+
+str1 <-- mychar + str2
+
+OUTPUT(str1)
